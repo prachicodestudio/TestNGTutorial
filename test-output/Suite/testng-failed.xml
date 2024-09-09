@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <parameter name="a" value="9"/>
+  <parameter name="b" value="6"/>
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="GoogleTest(failed)">
     <classes>
-      <class name="Demo.SecondTestCase">
+      <class name="Demo.AssertionExample">
         <methods>
-          <include name="testMethod1"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyGoogleImageIsDisplayed"/>
         </methods>
-      </class> <!-- Demo.SecondTestCase -->
+      </class> <!-- Demo.AssertionExample -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- GoogleTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class AssertionExample {
@@ -15,8 +17,11 @@ public class AssertionExample {
 	WebDriver driver;
 	
 	@BeforeClass
-	void setup()
+	@Parameters({"browser"})
+	void setup(String browserName)
 	{
+		if(browserName.equalsIgnoreCase("chrome"))
+		{
 		//open chrome browser
 		driver = new ChromeDriver();
 		
@@ -25,7 +30,19 @@ public class AssertionExample {
 		
 		//maximise browser
 		driver.manage().window().maximize();
+		}
 		
+		else if(browserName.equalsIgnoreCase("firefox"))
+		{
+		//open firefox browser
+		driver = new FirefoxDriver();
+		
+		//open url
+		driver.get("https://www.google.com/");
+		
+		//maximise browser
+		driver.manage().window().maximize();
+		}
 		
 	}
 	
@@ -55,10 +72,10 @@ public class AssertionExample {
 		WebElement image = driver.findElement(By.xpath("//img[@alt=\"Google\"]"));
 		
 		//verify if image is displayed
-	//	Assert.assertTrue(image.isDisplayed(), "Google image is not displayed.");
+		Assert.assertTrue(image.isDisplayed(), "Google image is not displayed.");
 		
 		//verify image shall not be displayed
-		Assert.assertFalse(image.isDisplayed(), "Google image is displayed.");
+		//Assert.assertFalse(image.isDisplayed(), "Google image is displayed.");
 
 	}
 	

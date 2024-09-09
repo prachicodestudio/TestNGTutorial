@@ -1,68 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-09T14:25:19 IST" name="Default suite" finished-at="2024-09-09T14:25:25 IST" duration-ms="5164">
+  <suite started-at="2024-09-09T16:39:44 IST" name="Suite" finished-at="2024-09-09T16:39:54 IST" duration-ms="9268">
     <groups>
     </groups>
-    <test started-at="2024-09-09T14:25:19 IST" name="Default test" finished-at="2024-09-09T14:25:25 IST" duration-ms="5164">
+    <test started-at="2024-09-09T16:39:44 IST" name="Sum" finished-at="2024-09-09T16:39:44 IST" duration-ms="49">
+      <class name="Demo.ParametersDemo">
+        <test-method signature="add(int,int)[pri:0, instance:Demo.ParametersDemo@6adbc9d]" started-at="2024-09-09T16:39:44 IST" name="add" finished-at="2024-09-09T16:39:44 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add -->
+      </class> <!-- Demo.ParametersDemo -->
+    </test> <!-- Sum -->
+    <test started-at="2024-09-09T16:39:45 IST" name="GoogleTestOnFirefox" finished-at="2024-09-09T16:39:50 IST" duration-ms="5605">
       <class name="Demo.AssertionExample">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Demo.AssertionExample@34123d65]" started-at="2024-09-09T14:25:20 IST" name="setup" finished-at="2024-09-09T14:25:24 IST" duration-ms="4484" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:Demo.AssertionExample@7dcf94f8]" started-at="2024-09-09T16:39:45 IST" name="setup" finished-at="2024-09-09T16:39:49 IST" duration-ms="4546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyGoogleImageIsDisplayed()[pri:0, instance:Demo.AssertionExample@34123d65]" started-at="2024-09-09T14:25:24 IST" name="verifyGoogleImageIsDisplayed" finished-at="2024-09-09T14:25:24 IST" duration-ms="44" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Google image is displayed. expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Google image is displayed. expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertFalse(Assert.java:79)
-at Demo.AssertionExample.verifyGoogleImageIsDisplayed(AssertionExample.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="verifyGoogleImageIsDisplayed()[pri:0, instance:Demo.AssertionExample@7dcf94f8]" started-at="2024-09-09T16:39:49 IST" name="verifyGoogleImageIsDisplayed" finished-at="2024-09-09T16:39:49 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGoogleImageIsDisplayed -->
-        <test-method signature="verifyPageTitle()[pri:0, instance:Demo.AssertionExample@34123d65]" started-at="2024-09-09T14:25:24 IST" name="verifyPageTitle" finished-at="2024-09-09T14:25:24 IST" duration-ms="5" status="PASS">
+        <test-method signature="verifyPageTitle()[pri:0, instance:Demo.AssertionExample@7dcf94f8]" started-at="2024-09-09T16:39:49 IST" name="verifyPageTitle" finished-at="2024-09-09T16:39:49 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.AssertionExample@34123d65]" started-at="2024-09-09T14:25:24 IST" name="tearDown" finished-at="2024-09-09T14:25:25 IST" duration-ms="596" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.AssertionExample@7dcf94f8]" started-at="2024-09-09T16:39:49 IST" name="tearDown" finished-at="2024-09-09T16:39:50 IST" duration-ms="986" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Demo.AssertionExample -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- GoogleTestOnFirefox -->
+    <test started-at="2024-09-09T16:39:50 IST" name="GoogleTestOnChrome" finished-at="2024-09-09T16:39:54 IST" duration-ms="3542">
+      <class name="Demo.AssertionExample">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:Demo.AssertionExample@9d5509a]" started-at="2024-09-09T16:39:50 IST" name="setup" finished-at="2024-09-09T16:39:53 IST" duration-ms="3358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyGoogleImageIsDisplayed()[pri:0, instance:Demo.AssertionExample@9d5509a]" started-at="2024-09-09T16:39:53 IST" name="verifyGoogleImageIsDisplayed" finished-at="2024-09-09T16:39:54 IST" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGoogleImageIsDisplayed -->
+        <test-method signature="verifyPageTitle()[pri:0, instance:Demo.AssertionExample@9d5509a]" started-at="2024-09-09T16:39:54 IST" name="verifyPageTitle" finished-at="2024-09-09T16:39:54 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Demo.AssertionExample@9d5509a]" started-at="2024-09-09T16:39:54 IST" name="tearDown" finished-at="2024-09-09T16:39:54 IST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Demo.AssertionExample -->
+    </test> <!-- GoogleTestOnChrome -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,0 +1,131 @@
+TestNG Tutorial Series - https://github.com/prachicodestudio/TestNGTutorial.git
+----------------------
+Session-01
+
+What is TestNG
+1. TestNG is testing framework inspired from Junit which uses annotations (@) . 
+It has new functionalities which makes it more powerful and easy to use.
+
+2. TestNG is designed to cover all categories of tests eg. unit test, functional test , end to end test , integration test.
+
+Benefits of TestNG
+
+1. HTML report
+2. Annotations (@)
+3. Group and prioritized test cases
+4. Parellel testing 
+5. Generate logs
+6. Data Parameterization is possible.
+
+Creating project (maven) in eclipse IDE with TESTNG dependencies
+
+Create FirstTestNG Test
+
+Running TestNG test
+
+
+Session-02
+------------
+What Is A Test Suite
+Process of running multiple test cases at once is called test suite.
+
+<suite name = "MySuite">
+	<test name = "TestName">
+		<classes>
+			<class  name = "PackageName.classname1" />
+			<class  name = "PackageName.classname2" />
+		</classes>
+	</test>
+
+</suite>
+
+What is TestNG XML file
+How to create TestNG XML file
+How to run tests from XML file
+TestNG report
+
+Session -03
+----------------
+
+TestNG Annotations
+
+
+TestNG annotations are line of code/unique code identifier added to the programme to specify how the below procedure/method
+ shall be executed.
+
+@Annotation
+Public void TestMethod1()
+{
+}
+
+Annotations - https://testng.org/annotations.html
+------------
+@BeforeSuite: The annotated method will be run before all tests in this suite have run.
+
+@AfterSuite: The annotated method will be run after all tests in this suite have run.
+
+@BeforeTest: The annotated method will be run before any test method belonging to the classes inside the <test> tag is run.
+
+@AfterTest: The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
+
+@BeforeGroups: The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.
+
+@AfterGroups: The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.
+
+@BeforeClass: The annotated method will be run before the first test method in the current class is invoked.
+
+@AfterClass: The annotated method will be run after all the test methods in the current class have been run.
+
+@BeforeMethod: The annotated method will be run before each test method.
+
+@AfterMethod: The annotated method will be run after each test method.
+
+
+Session-04
+------------
+
+How to priortize test 
+@Test(priority =0)
+Lower the priority number, higher is the priority of the test method.
+
+
+
+Note: ByDefault TestNG test methods are executed alphabetially
+
+We can assign negative priorities to a test methods.
+With a method with no priority, the priority is set to 0 by default.
+
+
+How to disable test
+To disable test in testNG we should set the enabled attribute of the @Test annotation to false
+
+@Test(enabled=false)
+
+
+Session-05
+----------
+Grouping Test based on test category for eg. Sanity test group, functional test group , regression test group etc.
+
+@Test(groups={"GroupName1,GroupName2,..."}
+
+In TestNG xml File add group tag 
+Example
+
+
+Testng.xml
+
+<groups>
+	<run>
+		<exclude name="GroupName1"></exclude>
+		<include name="GroupName2"></include>
+		<include name="GroupName3"></include>
+	</run>
+		
+</groups>
+
+
+
+
+
+
+

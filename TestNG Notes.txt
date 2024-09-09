@@ -124,6 +124,36 @@ Testng.xml
 </groups>
 
 
+Session-06
+-----------
+
+Dependent Tests
+
+TestA and TestB test methods
+
+I want testB to run if TestA has run. In this testB depends on testA. Such tests are called Dependent Test in TestNG.
+
+TestNG allows you to specify dependecies by using dependsOn attribute.
+
+dependsOnMethods
+dependsOnGroups
+
+alwaysRun-
+alwaysRun attribute if set to true, this configuration method will be run even if one or more methods invoked previously failed or was skipped.
+
+
+
+Session-07
+-----------
+Assertions in TestNG are a way to verify that the expected result and the actual result matched or not.
+
+Assertion methods  in TestNG
+- Assert.assertTrue(), Assert.assertFalse(), Assert.Equals()
+
+
+Syntax
+Assert.Method(actual,expected);
+Assert.Method(actual,expected,message);
 
 
 

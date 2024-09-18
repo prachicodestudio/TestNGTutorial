@@ -155,6 +155,113 @@ Syntax
 Assert.Method(actual,expected);
 Assert.Method(actual,expected,message);
 
+Session-08
+------------
+TestNG Parameters are the arguments that we pass to the test methods.
+
+
+Session-09
+-----------
+DataProviders
+1) DataProviders are used for data driven testing which means same test case can be run with different set of data.
+2) We have to create a method for providing data to test methods.
+3) Annotated methods (@DataProvider) will return an array of object i;e Object[][] (2d list of object)
+4) DataProvider can have a name and it will be used in other test methods.
+5) DataProvider can be implemented in the same class or a separate class.
+
+@DataProvider(name = "name of the data provider")
+
+public Object[][] dataProviderMethod(){
+return new Object[][]
+{values};
+}
+
+Session-10
+-----------
+Parallel Testing or Parallel execution is a process of running the test case parallely rather than executing sequentially (one after another).
+
+It is used heavily with selenium for cross browser testing.
+
+Adv
+1) Reduces time
+2) It allows multi threaded test
+
+We can run 
+
+	test classes parallelly
+	test methods parallelly
+	test suite parallelly
+
+
+Session -11
+------------
+
+TestNG Listeners
+
+You can you use listeners to monitor and react to events during the test lifecycle such as test start, test success , test failure etc. TestNG Listeners allows you to add custom behavior to your test execution.
+
+Listeners enable ou to handle specific event during the execution of tests. For example- you can log information, capture screenshots on test failure or generate reports after test complete.
+
+TestNG provides many listener interfaces
+
+listeners are as follows:
+
+ITestListener - most popular
+IReporter
+ISuiteListener
+IInvokedMethod
+IHookable
+IConfigurationListener
+IConfigurableListener
+IAnnotationTransformer
+IExecution
+IMethodInterceptor
+
+ ITestListener in TestNG
+-------------------------
+
+1. Create listner class
+We have to create class in which we implement ITestListener override the ITestListener methods.
+
+onTestStart(ITestResult result): Called before a test method is invoked.
+onTestSuccess(ITestResult result): Called if a test method succeeds.
+onTestFailure(ITestResult result): Called if a test method fails.
+onTestSkipped(ITestResult result): Called if a test method is skipped.
+onStart(ITestContext context): Called before the test suite starts.
+onFinish(ITestContext context): Called after the test suite finishes.
+
+
+2. Add the listener class to your test
+	option1) add listner in the TestNG XML configuration
+	option2) user @Listeners annotation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

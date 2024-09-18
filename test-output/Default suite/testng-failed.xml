@@ -5,6 +5,7 @@
     <classes>
       <class name="Demo.AssertionExample">
         <methods>
+          <include name="verifyPageTitle"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="verifyGoogleImageIsDisplayed"/>

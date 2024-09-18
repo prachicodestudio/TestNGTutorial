@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Demo.TestClass" class="method navigator-link" hash-for-method="testMethod3">testMethod3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +117,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Demo.ParametersDemo" class="method navigator-link" hash-for-method="add(9, 6)">add(9, 6)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Demo.TestClass" class="method navigator-link" hash-for-method="testMethod1">testMethod1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Demo.TestClass" class="method navigator-link" hash-for-method="testMethod2">testMethod2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Demo.AssertionExample" class="method navigator-link" hash-for-method="verifyGoogleImageIsDisplayed">verifyGoogleImageIsDisplayed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Demo.AssertionExample" class="method navigator-link" hash-for-method="verifyGoogleImageIsDisplayed">verifyGoogleImageIsDisplayed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Demo.AssertionExample" class="method navigator-link" hash-for-method="verifyPageTitle">verifyPageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -138,18 +147,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Demo.ParametersDemo</span>
+              <img src="failed.png"/>
+              <span class="class-name">Demo.TestClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="add(9, 6)">
-                  </a> <!-- add(9, 6) -->
-                  <span class="method-name">add</span>
-                  <span class="parameters">(9,6)</span>
+                  <a name="testMethod3">
+                  </a> <!-- testMethod3 -->
+                  <span class="method-name">testMethod3</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Demo.TestClass.testMethod3(TestClass.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Demo.TestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMethod1">
+                  </a> <!-- testMethod1 -->
+                  <span class="method-name">testMethod1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMethod2">
+                  </a> <!-- testMethod2 -->
+                  <span class="method-name">testMethod2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,20 +200,6 @@
                   <a name="verifyGoogleImageIsDisplayed">
                   </a> <!-- verifyGoogleImageIsDisplayed -->
                   <span class="method-name">verifyGoogleImageIsDisplayed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyGoogleImageIsDisplayed">
-                  </a> <!-- verifyGoogleImageIsDisplayed -->
-                  <span class="method-name">verifyGoogleImageIsDisplayed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyPageTitle">
-                  </a> <!-- verifyPageTitle -->
-                  <span class="method-name">verifyPageTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -200,25 +221,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;a&quot; value=&quot;9&quot;/&gt;
-  &lt;parameter name=&quot;b&quot; value=&quot;6&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Sum&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Demo.ListenerDemo&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Demo.ParametersDemo&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Sum --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;GoogleTestOnFirefox&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-    &lt;classes&gt;
+      &lt;class name=&quot;Demo.TestClass&quot;/&gt;
       &lt;class name=&quot;Demo.AssertionExample&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- GoogleTestOnFirefox --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;GoogleTestOnChrome&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;Demo.AssertionExample&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- GoogleTestOnChrome --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,13 +242,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Sum (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">GoogleTestOnFirefox (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">GoogleTestOnChrome (1 class)</span>
+                <span class="test-name">Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -266,28 +272,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyGoogleImageIsDisplayed')
 data.setCell(0, 2, 'Demo.AssertionExample')
-data.setCell(0, 3, 57);
+data.setCell(0, 3, 41);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyGoogleImageIsDisplayed')
-data.setCell(1, 2, 'Demo.AssertionExample')
-data.setCell(1, 3, 37);
+data.setCell(1, 1, 'testMethod1')
+data.setCell(1, 2, 'Demo.TestClass')
+data.setCell(1, 3, 11);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyPageTitle')
-data.setCell(2, 2, 'Demo.AssertionExample')
-data.setCell(2, 3, 11);
+data.setCell(2, 1, 'testMethod3')
+data.setCell(2, 2, 'Demo.TestClass')
+data.setCell(2, 3, 8);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'add')
-data.setCell(3, 2, 'Demo.ParametersDemo')
-data.setCell(3, 3, 10);
+data.setCell(3, 1, 'verifyPageTitle')
+data.setCell(3, 2, 'Demo.AssertionExample')
+data.setCell(3, 3, 7);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyPageTitle')
-data.setCell(4, 2, 'Demo.AssertionExample')
-data.setCell(4, 3, 8);
+data.setCell(4, 1, 'testMethod2')
+data.setCell(4, 2, 'Demo.TestClass')
+data.setCell(4, 3, 2);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 123 ms</span>
+              <span class="suite-total-time">Total running time: 69 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -313,46 +319,48 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Demo.ParametersDemo</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Demo.TestClass</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">add(9, 6)</span>
+                <span class="method-name">testMethod1</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMethod2</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testMethod3</span>
+                <span class="method-start">18 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.AssertionExample</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(firefox)</span>
-                <span class="method-start">85 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyGoogleImageIsDisplayed</span>
-                <span class="method-start">4633 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyPageTitle</span>
-                <span class="method-start">4692 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">4702 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
+              <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">5693 ms</span>
-              </div> <!-- configuration-class before -->
+                <span class="method-start">36 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyGoogleImageIsDisplayed</span>
-                <span class="method-start">9052 ms</span>
+                <span class="method-start">5415 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5460 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">5547 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPageTitle</span>
-                <span class="method-start">9094 ms</span>
+                <span class="method-start">7818 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9106 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">7827 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -7,7 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -16,10 +18,11 @@ public class AssertionExample {
 	//instantiate selenium webdriver
 	WebDriver driver;
 	
-	@BeforeClass
+	@BeforeMethod
 	@Parameters({"browser"})
 	void setup(String browserName)
 	{
+		System.out.println("Setup method executed");
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
 		//open chrome browser
@@ -46,9 +49,10 @@ public class AssertionExample {
 		
 	}
 	
-	@AfterClass
+	@AfterMethod
 	void tearDown()
 	{
+		System.out.println("teardown method executed");
 		//close browser
 		driver.close();
 	}
@@ -57,6 +61,7 @@ public class AssertionExample {
 	@Test
 	void verifyPageTitle()
 	{
+		System.out.println("verify title method executed");
 		String ExpectedPageTitle = "Google";
 		String ActualPageTitle = driver.getTitle();
 		
@@ -68,6 +73,7 @@ public class AssertionExample {
 	@Test
 	void verifyGoogleImageIsDisplayed()
 	{
+		System.out.println("Verify google image method executed");
 		//find google image
 		WebElement image = driver.findElement(By.xpath("//img[@alt=\"Google\"]"));
 		
